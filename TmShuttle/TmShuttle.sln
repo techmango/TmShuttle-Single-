@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TmShuttle", "TmShuttle.cspr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShadowLabel", "..\BorderLabel\ShadowLabel.csproj", "{A8F3D10F-DCE3-4EF5-B352-14AF048212BC}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupTmShuttle_Single", "..\SetupTmShuttle_Single\SetupTmShuttle_Single.vdproj", "{A882C5CC-21E2-4513-827C-F21413B94F88}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,12 @@ Global
 		{A8F3D10F-DCE3-4EF5-B352-14AF048212BC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{A8F3D10F-DCE3-4EF5-B352-14AF048212BC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{A8F3D10F-DCE3-4EF5-B352-14AF048212BC}.Release|x86.ActiveCfg = Release|Any CPU
+		{A882C5CC-21E2-4513-827C-F21413B94F88}.Debug|Any CPU.ActiveCfg = Debug
+		{A882C5CC-21E2-4513-827C-F21413B94F88}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{A882C5CC-21E2-4513-827C-F21413B94F88}.Debug|x86.ActiveCfg = Debug
+		{A882C5CC-21E2-4513-827C-F21413B94F88}.Release|Any CPU.ActiveCfg = Release
+		{A882C5CC-21E2-4513-827C-F21413B94F88}.Release|Mixed Platforms.ActiveCfg = Release
+		{A882C5CC-21E2-4513-827C-F21413B94F88}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

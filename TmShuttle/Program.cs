@@ -13,10 +13,21 @@ namespace TmShuttle
         [STAThread]
         static void Main()
         {
-
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMain());
+            bool createNew = false;
+            using (System.Threading.Mutex m = new System.Threading.Mutex(true, Application.ProductName, out createNew))
+            {
+                if (createNew)
+                {
+                    Application.EnableVisualStyles();
+                    Application.SetCompatibleTextRenderingDefault(false);
+                    Application.Run(new FrmMain());
+                }
+                else
+                {
+                    MessageBox.Show("Only one instance of this application is allowed!");
+                }
+            } 
+            
         }
     }
 }

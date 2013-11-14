@@ -135,6 +135,7 @@
             this.btnRelay07.TabIndex = 7;
             this.btnRelay07.Tag = "断开";
             this.btnRelay07.Values.Text = "7";
+            this.btnRelay07.Click += new System.EventHandler(this.btnRelay_Click);
             // 
             // kryptonContextMenu1
             // 
@@ -164,6 +165,7 @@
             this.btnRelay06.TabIndex = 6;
             this.btnRelay06.Tag = "断开";
             this.btnRelay06.Values.Text = "6";
+            this.btnRelay06.Click += new System.EventHandler(this.btnRelay_Click);
             // 
             // btnRelay05
             // 
@@ -177,6 +179,7 @@
             this.btnRelay05.TabIndex = 5;
             this.btnRelay05.Tag = "断开";
             this.btnRelay05.Values.Text = "5";
+            this.btnRelay05.Click += new System.EventHandler(this.btnRelay_Click);
             // 
             // btnRelay04
             // 
@@ -190,6 +193,7 @@
             this.btnRelay04.TabIndex = 4;
             this.btnRelay04.Tag = "断开";
             this.btnRelay04.Values.Text = "4";
+            this.btnRelay04.Click += new System.EventHandler(this.btnRelay_Click);
             // 
             // btnRelay03
             // 
@@ -203,6 +207,7 @@
             this.btnRelay03.TabIndex = 3;
             this.btnRelay03.Tag = "断开";
             this.btnRelay03.Values.Text = "3";
+            this.btnRelay03.Click += new System.EventHandler(this.btnRelay_Click);
             // 
             // btnRelay02
             // 
@@ -216,6 +221,7 @@
             this.btnRelay02.TabIndex = 2;
             this.btnRelay02.Tag = "断开";
             this.btnRelay02.Values.Text = "2";
+            this.btnRelay02.Click += new System.EventHandler(this.btnRelay_Click);
             // 
             // btnRelay01
             // 
@@ -229,6 +235,7 @@
             this.btnRelay01.TabIndex = 1;
             this.btnRelay01.Tag = "断开";
             this.btnRelay01.Values.Text = "1";
+            this.btnRelay01.Click += new System.EventHandler(this.btnRelay_Click);
             // 
             // btnRelay00
             // 
@@ -242,6 +249,7 @@
             this.btnRelay00.TabIndex = 0;
             this.btnRelay00.Tag = "断开";
             this.btnRelay00.Values.Text = "0";
+            this.btnRelay00.Click += new System.EventHandler(this.btnRelay_Click);
             // 
             // btnRelay08
             // 
@@ -255,6 +263,7 @@
             this.btnRelay08.TabIndex = 8;
             this.btnRelay08.Tag = "断开";
             this.btnRelay08.Values.Text = "8";
+            this.btnRelay08.Click += new System.EventHandler(this.btnRelay_Click);
             // 
             // btnRelay09
             // 
@@ -268,6 +277,7 @@
             this.btnRelay09.TabIndex = 9;
             this.btnRelay09.Tag = "断开";
             this.btnRelay09.Values.Text = "9";
+            this.btnRelay09.Click += new System.EventHandler(this.btnRelay_Click);
             // 
             // btnRelay10
             // 
@@ -281,6 +291,7 @@
             this.btnRelay10.TabIndex = 10;
             this.btnRelay10.Tag = "断开";
             this.btnRelay10.Values.Text = "10";
+            this.btnRelay10.Click += new System.EventHandler(this.btnRelay_Click);
             // 
             // btnRelay11
             // 
@@ -294,6 +305,7 @@
             this.btnRelay11.TabIndex = 11;
             this.btnRelay11.Tag = "断开";
             this.btnRelay11.Values.Text = "11";
+            this.btnRelay11.Click += new System.EventHandler(this.btnRelay_Click);
             // 
             // btnRelay12
             // 

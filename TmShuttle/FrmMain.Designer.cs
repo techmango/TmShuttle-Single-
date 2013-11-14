@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.timer_BgMusic = new System.Windows.Forms.Timer(this.components);
+            this.timer_Clock = new System.Windows.Forms.Timer(this.components);
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.lbl_Time = new System.Windows.Forms.Label();
             this.lbl_SystemCaption = new cSouza.WinForms.Controls.ShadowLabel();
             this.kryptonNavigator1 = new ComponentFactory.Krypton.Navigator.KryptonNavigator();
             this.kryptonPage1 = new ComponentFactory.Krypton.Navigator.KryptonPage();
@@ -48,22 +48,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage4)).BeginInit();
             this.SuspendLayout();
             // 
-            // webBrowser1
+            // timer_Clock
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(634, 4);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.ScrollBarsEnabled = false;
-            this.webBrowser1.Size = new System.Drawing.Size(146, 35);
-            this.webBrowser1.TabIndex = 1;
-            // 
-            // timer_BgMusic
-            // 
-            this.timer_BgMusic.Interval = 1000;
-            this.timer_BgMusic.Tick += new System.EventHandler(this.timer_BgMusic_Tick);
+            this.timer_Clock.Interval = 1000;
+            this.timer_Clock.Tick += new System.EventHandler(this.timer_Clock_Tick);
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.lbl_Time);
             this.kryptonPanel1.Controls.Add(this.lbl_SystemCaption);
             this.kryptonPanel1.Controls.Add(this.kryptonNavigator1);
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -71,6 +63,17 @@
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(731, 488);
             this.kryptonPanel1.TabIndex = 75;
+            // 
+            // lbl_Time
+            // 
+            this.lbl_Time.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Time.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Time.Location = new System.Drawing.Point(551, 4);
+            this.lbl_Time.Name = "lbl_Time";
+            this.lbl_Time.Size = new System.Drawing.Size(177, 38);
+            this.lbl_Time.TabIndex = 78;
+            this.lbl_Time.Text = "label1";
+            this.lbl_Time.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_SystemCaption
             // 
@@ -173,7 +176,10 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(731, 488);
             this.Controls.Add(this.kryptonPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "FrmMain";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).EndInit();
@@ -188,9 +194,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Timer timer_BgMusic;
+        private System.Windows.Forms.Timer timer_Clock;
         private ComponentFactory.Krypton.Toolkit.KryptonManager kryptonManager1;
-        private System.Windows.Forms.WebBrowser webBrowser1;
         private ComponentFactory.Krypton.Toolkit.KryptonDropButton kryptonDropButton1;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
         private ComponentFactory.Krypton.Navigator.KryptonNavigator kryptonNavigator1;
@@ -199,6 +204,7 @@
         private ComponentFactory.Krypton.Navigator.KryptonPage kryptonPage3;
         private cSouza.WinForms.Controls.ShadowLabel lbl_SystemCaption;
         private ComponentFactory.Krypton.Navigator.KryptonPage kryptonPage4;
+        private System.Windows.Forms.Label lbl_Time;
     }
 }
 

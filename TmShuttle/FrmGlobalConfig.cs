@@ -116,7 +116,7 @@ namespace TmShuttle
 
         private void GlobalConfig_Load(object sender, EventArgs e)
         {
-
+            lbl_HelpInfo.Text = System.Configuration.ConfigurationManager.AppSettings["HelpInfo"];
         }
     }
 }

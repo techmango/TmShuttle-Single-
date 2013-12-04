@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.timer_Clock = new System.Windows.Forms.Timer(this.components);
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.lbl_Time = new System.Windows.Forms.Label();
@@ -177,6 +178,8 @@
             this.ClientSize = new System.Drawing.Size(731, 488);
             this.Controls.Add(this.kryptonPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.FormCustom1;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmMain";
             this.Load += new System.EventHandler(this.FrmMain_Load);

@@ -5,14 +5,14 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Data;
 using System.Data.OleDb;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using ComponentFactory.Krypton.Toolkit;
 
 using System.IO.Ports;
-using System.Threading;  
+using System.Threading;
+using ToastNotification;
 
 namespace TmShuttle
 {
@@ -100,13 +100,15 @@ namespace TmShuttle
                 state = SerialOpen(serialnum, baud, 0, 8, 0);
                 if (state == false)
                 {
-                    MessageBox.Show("打开失败！");
+                    NotificationManager.Show(this, "打开失败！",
+                                Color.Gold, 1000);
                     return;
                 }
             }
             catch
             {
-                MessageBox.Show("打开失败！");
+                NotificationManager.Show(this, "打开失败！",
+                                Color.Gold, 1000);
                 return;
             }
         }
@@ -124,7 +126,8 @@ namespace TmShuttle
                 SerialSetReadTimeOut(1000);//设置读超时为1秒
                 if (SerialRecv(recbuf, 8) == 0)//如果读取8个字节返回字节数为0
                 {
-                    MessageBox.Show("读取失败！");
+                    NotificationManager.Show(this, "读取失败！",
+                                Color.Gold, 1000);
                     return;
                 }
                 else
@@ -144,7 +147,8 @@ namespace TmShuttle
                 SerialSetReadTimeOut(1000);//设置读超时为1秒
                 if (SerialRecv(recbuf, 8) == 0)//如果读取8个字节返回字节数为0
                 {
-                    MessageBox.Show("读取失败！");
+                    NotificationManager.Show(this, "读取失败！",
+                                Color.Gold, 1000);
                     return;
                 }
                 else
@@ -173,7 +177,8 @@ namespace TmShuttle
             SerialSetReadTimeOut(1000);//设置读超时为1秒
             if (SerialRecv(recbuf, 8) == 0)//如果读取8个字节返回字节数为0
             {
-                MessageBox.Show("读取失败！");
+                NotificationManager.Show(this, "读取失败！",
+                                Color.Gold, 1000);
                 return;
             }
             else
@@ -201,7 +206,8 @@ namespace TmShuttle
             SerialSetReadTimeOut(1000);//设置读超时为1秒
             if (SerialRecv(recbuf, 8) == 0)//如果读取8个字节返回字节数为0
             {
-                MessageBox.Show("读取失败！");
+                NotificationManager.Show(this, "读取失败！",
+                                Color.Gold, 1000);
                 return;
             }
             else
@@ -265,7 +271,8 @@ namespace TmShuttle
             }
             else
             {
-                MessageBox.Show("读取失败！");
+                NotificationManager.Show(this, "读取失败！",
+                                Color.Gold, 1000);
                 return;
             }
         }

@@ -20,18 +20,27 @@ namespace TmShuttle
 
         private void btn_Register_Click(object sender, EventArgs e)
         {
-            string serialNumber = string.Format("{0}-{1}-{2}-{3}-{4}-{5}", txt_serNo1.Text,
+            if (btn_Register.Text == "注册")
+            {
+                string serialNumber = string.Format("{0}-{1}-{2}-{3}-{4}-{5}", txt_serNo1.Text,
                 txt_serNo2.Text, txt_serNo3.Text, txt_serNo4.Text, txt_serNo5.Text, txt_serNo6.Text);
 
-            if (RegisterUtility.Register2Computer(txt_MvNum.Text, serialNumber, "Techmango", "TmShuttle") == true)
-            {
-                MessageBox.Show("注册码成功，欢迎使用！O(∩_∩)O");
-                btn_Register.Text = "关闭后继续使用";
+                if (RegisterUtility.Register2Computer(txt_MvNum.Text, serialNumber, "Techmango", "TmShuttle") == true)
+                {
+                    MessageBox.Show("注册码成功，欢迎使用！O(∩_∩)O");
+                    btn_Register.Text = "关闭后继续使用";
+                }
+                else
+                {
+                    MessageBox.Show("注册码不正确！╮(╯▽╰)╭");
+                }
             }
             else
             {
-                MessageBox.Show("注册码不正确！╮(╯▽╰)╭");
+                this.Hide();
             }
+
+            
         }
 
         private void FrmRegister_FormClosing(object sender, FormClosingEventArgs e)

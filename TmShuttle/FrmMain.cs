@@ -103,7 +103,7 @@ namespace TmShuttle
         private void timer_Clock_Tick(object sender, EventArgs e)
         {
             lbl_Time.Text = getTime(); 
-            if ((DateTime.Now - firstRunTime).Seconds == 3)
+            if ((DateTime.Now - firstRunTime).Seconds >= 2)
             {
                 if (RegisterUtility.CheckRegister("Techmango", "TmShuttle", IniConfig.ReadValue("SerialNumber")) == false)
                 {

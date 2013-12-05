@@ -15,6 +15,7 @@ namespace TmShuttle
         public FrmRegister()
         {
             InitializeComponent();
+            this.ControlBox = false;
         }
 
         private void btn_Register_Click(object sender, EventArgs e)
@@ -41,7 +42,7 @@ namespace TmShuttle
             }
             else
             {
-                this.Close();
+                this.Hide();
             }
         }
 

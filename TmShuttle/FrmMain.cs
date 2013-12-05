@@ -19,10 +19,14 @@ namespace TmShuttle
         DateTime firstRunTime;
         //MP3 mp3Player;
         FrmClassGrade frmClassGrade;
+        FrmRegister frmRegister;
+        bool isShow = false;
         public FrmMain()
         {
             InitializeComponent();
             this.LayoutMdi(MdiLayout.ArrangeIcons);
+            frmRegister = new FrmRegister();
+            frmRegister.Owner = this;
             this.lbl_SystemCaption.Text = ConfigurationManager.AppSettings["SystemCaption"]; //RegisterUtility.getSerialNum(RegisterUtility.getMvNum());// 
             //mp3Player = new MP3();
 
@@ -98,12 +102,17 @@ namespace TmShuttle
 
         private void timer_Clock_Tick(object sender, EventArgs e)
         {
-            lbl_Time.Text = getTime();
+            lbl_Time.Text = getTime(); 
             if ((DateTime.Now - firstRunTime).Seconds == 3)
             {
                 if (RegisterUtility.CheckRegister("Techmango", "TmShuttle", IniConfig.ReadValue("SerialNumber")) == false)
                 {
-                    new FrmRegister().ShowDialog();
+                    if (isShow == false)
+                    {
+                        isShow = true;
+                        frmRegister.ShowDialog();
+                        
+                    }
                 }
             }
         }

@@ -22,7 +22,7 @@ namespace RegCodeGenerator
             {
                 if(!string.IsNullOrEmpty(txt_MvNum.Text.Trim()))
                 {
-                    txt_SerialNumber.Text = TmShuttle.RegisterUtility.getSerialNum(txt_MvNum.Text.Trim());
+                    txt_SerialNumber.Text = RegisterUtility.getSerialNum(txt_MvNum.Text.Trim());
                 }
                 else
                 {
